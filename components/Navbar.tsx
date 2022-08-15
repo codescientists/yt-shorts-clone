@@ -1,6 +1,6 @@
 import { GoogleLogin, googleLogout } from '@react-oauth/google'
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FaBars, FaSearch, FaYoutube } from 'react-icons/fa'
 import useAuthStore from '../store/userStore'
 import useHomeStore from '../store/homeStore'
@@ -13,10 +13,6 @@ const Navbar = () => {
     const { userProfile, addUser, removeUser } = useAuthStore();
 
     const { toggleNavbar, navOpen } = useHomeStore();
-
-    useEffect(() => {
-        console.log(navOpen)
-    }, [])
 
 
     return (
