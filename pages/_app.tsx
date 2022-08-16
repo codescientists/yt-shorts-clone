@@ -16,7 +16,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <GoogleOAuthProvider clientId={`${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}`}>
-      <div className='bg-neutral-900'>
+      <div className='bg-neutral-900 h-screen'>
         <Navbar />
         <div className="flex">
           <Sidebar />

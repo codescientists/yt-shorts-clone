@@ -19,7 +19,7 @@ const Home: NextPage<IProps> = ({ videos }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container snap-y snap-mandatory mt-[6rem] h-[40rem] w-[20rem] flex flex-col items-center overflow-hidden overflow-y-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+      <div className="container snap-y snap-mandatory mt-[10rem] md:mt-[6rem] md:h-[40rem] md:w-[20rem] flex flex-col items-center overflow-hidden overflow-y-scroll">
         {videos.map((video) => (
           <div
             className="my-10 snap-center"
@@ -29,7 +29,7 @@ const Home: NextPage<IProps> = ({ videos }) => {
               loop
               controls
               src={video.video.asset.url}
-              className='w-[100px] md:w-full rounded-xl cursor-pointer'
+              className='w-[250px] md:w-full rounded-xl cursor-pointer'
             ></video>
           </div>
         ))}

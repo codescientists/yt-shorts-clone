@@ -70,7 +70,7 @@ const Upload = () => {
 
     if (userProfile) {
         return (
-            <div className="pt-24 pl-40 flex items-center justify-center">
+            <div className="pt-24 pl-96 flex items-center justify-center">
                 <div>
                     <div className='mb-4'>
                         <p className='text-3xl font-bold'>Upload Video</p>

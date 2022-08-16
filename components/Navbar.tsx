@@ -14,21 +14,22 @@ const Navbar = () => {
 
     const { toggleNavbar, navOpen } = useHomeStore();
 
-
     return (
         <header className="text-gray-400 bg-neutral-800 absolute w-full">
-            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <button onClick={() => toggleNavbar(navOpen)} className="rounded h-10 w-10 flex items-center justify-center text-white hover:bg-neutral-700"><FaBars /></button>
-                <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                    <span className="ml-3 text-xl flex items-center justify-center"> <FaYoutube className="mr-2" /> Shorts</span>
-                </a>
-                <div className="mx-auto w-96 h-10 flex items-center">
+            <div className="container mx-auto flex flex-wrap pt-2 md:p-3 flex-col md:flex-row items-center">
+                <div className="flex items-center justify-center">
+                    <button onClick={() => toggleNavbar(navOpen)} className="rounded h-10 w-10 flex items-center justify-center text-white hover:bg-neutral-700"><FaBars /></button>
+                    <a className="flex title-font font-medium items-center text-white md:mb-0">
+                        <span className="ml-3 text-xl flex items-center justify-center"> <FaYoutube className="mr-2" /> Shorts</span>
+                    </a>
+                </div>
+                <div className="mx-auto w-56 md:w-96 h-10 flex items-center">
                     <input type="search" name="search" id="search" placeholder="Search" className="text-white h-10 w-[85%] outline-none bg-neutral-900 border border-neutral-700 pl-2" />
                     <button className="bg-neutral-700 text-white w-[15%] h-full flex items-center justify-center"><FaSearch /></button>
                 </div>
                 <div>
                     {userProfile ?
-                        <div className='flex items-center justify-center'>
+                        <div className='flex items-center justify-center my-4 md:my-0'>
                             <Link href={`/upload`}>
                                 <a className="h-10 w-10 text-white text-xl mr-2 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700"> <AiOutlineVideoCameraAdd /> </a>
                             </Link>

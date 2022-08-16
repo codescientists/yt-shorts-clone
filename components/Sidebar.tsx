@@ -16,10 +16,10 @@ const Sidebar = () => {
     const router = useRouter();
 
     return (
-        <div className={`${navOpen ? 'visible w-64 ' : 'invisible w-0 '} h-screen bg-neutral-800 z-10 duration-150`} >
+        <div className={`${navOpen ? 'visible w-72 md:w-64' : 'invisible w-0 '} absolute md:relative h-screen bg-neutral-800 z-10 duration-150`} >
             <div className="flex p-5">
                 <button onClick={() => toggleNavbar(navOpen)} className="rounded h-10 w-10 flex items-center justify-center text-white hover:bg-neutral-700"><FaBars /></button>
-                <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <a className="flex title-font font-medium items-center text-white">
                     <span className="ml-3 text-xl flex items-center justify-center"> <FaYoutube className="mr-2" /> Shorts</span>
                 </a>
             </div>
